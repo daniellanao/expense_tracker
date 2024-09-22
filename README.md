@@ -1,4 +1,4 @@
-![Logo](https://daniellanao.com/img/daniel_isotipo.png)
+<img src="https://daniellanao.com/img/daniel_isotipo.png" alt="Logo" width="100px">
 
 # Expense Tracker
 
