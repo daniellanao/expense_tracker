@@ -1,4 +1,4 @@
-import { Grid, GridItem } from "@chakra-ui/react"
+import { Grid, GridItem, Text } from "@chakra-ui/react"
 import ExpenseList from "./components/ExpenseList"
 import { useState } from "react";
 import ExpenseFilter from "./components/ExpenseFilter";
@@ -25,8 +25,8 @@ function App() {
     fontWeight='bold'
     padding={3}
   >
-    <GridItem pl='2' bg='orange.300' area={'header'}>
-      <h1>Expense Tracker</h1>
+    <GridItem pl='2'area={'header'}>
+      <Text as='h1' fontSize='4xl'>Expense Tracker</Text>            
     </GridItem>
     <GridItem pl='2' area={'nav'}>      
       <ExpenseForm onSubmit={expense=>setExpenses([...expenses,{...expense,id:expenses.length+1}])}></ExpenseForm>
@@ -34,10 +34,7 @@ function App() {
     <GridItem pl='2' area={'main'}>
       <ExpenseFilter onSelectCategory={category=>setSelectedCategory(category)}></ExpenseFilter>
       <ExpenseList expenses={visibleExpenses} onDelete={(id)=>setExpenses(expenses.filter((e)=>e.id!==id))}></ExpenseList>
-    </GridItem>
-    <GridItem pl='2' bg='blue.300' area={'footer'}>
-      Footer
-    </GridItem>
+    </GridItem>    
   </Grid>
 
   )
